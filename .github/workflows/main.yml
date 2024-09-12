@@ -52,4 +52,4 @@ jobs:
       # 6. Copy to S3 bucket.
       - name: Copy to S3 Bucket
         run: |
-          aws s3 cp ./dist/cse5234_project/browser s3://cse5234-project-bucket
+          aws s3 cp /dist/cse5234_project/browser s3://cse5234-project-bucket
