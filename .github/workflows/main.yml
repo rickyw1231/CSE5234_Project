@@ -30,15 +30,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.12.0'
-          
-      # 4. Setup Cache
-      - name: Setup Cache
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
 
       # 5. Build Angular
       - name: Build Angular Application
