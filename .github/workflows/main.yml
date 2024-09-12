@@ -54,5 +54,5 @@ jobs:
         run: |
           ls
           cd cse5234_project
-          ls
+          ls -R dist/cse5234_project/browser
           aws s3 cp ./dist/cse5234_project s3://cse5234-project-bucket
