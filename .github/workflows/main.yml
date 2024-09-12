@@ -55,4 +55,4 @@ jobs:
           ls
           cd cse5234_project
           ls
-          aws s3 cp ./dist/cse5234_project/browser s3://cse5234-project-bucket
+          aws s3 cp ./dist/cse5234_project s3://cse5234-project-bucket
