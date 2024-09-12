@@ -12,6 +12,7 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
+        AWS_S3_BUCKET: 'cse5234-project-bucket'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: us-east-1
@@ -35,4 +36,4 @@ jobs:
 
     - name: Deploy
       if: success()
-      run: aws s3 sync ./dist/cse5234-project/browser s3://cse5234-project-bucket
+      run: aws s3 sync ./dist/cse5234-project-bucket s3://cse5234-project-bucket

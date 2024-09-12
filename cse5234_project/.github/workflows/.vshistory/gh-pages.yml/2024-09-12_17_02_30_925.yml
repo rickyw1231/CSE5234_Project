@@ -35,4 +35,4 @@ jobs:
 
     - name: Deploy
       if: success()
-      run: aws s3 sync ./dist/cse5234-project/browser s3://cse5234-project-bucket
+      run: aws s3 sync ./dist/cse5234-project-bucket s3://cse5234-project-bucket
